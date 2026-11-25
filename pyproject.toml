@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pesping"
+version = "1.1.0"
+description = "Concurrent IPv4 ICMP scanner and upgrade availability monitor"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "jpesqueda"}]
+keywords = ["ping", "icmp", "network", "monitor", "network-automation", "upgrade"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+  "Topic :: System :: Networking :: Monitoring",
+]
+dependencies = ["colorama>=0.4.6; platform_system == 'Windows'"]
+
+[project.scripts]
+pesping = "pesping:main"
+
+[project.urls]
+Homepage = "https://github.com/jpesqueda/pesping"
+Repository = "https://github.com/jpesqueda/pesping"
+Documentation = "https://github.com/jpesqueda/pesping/blob/main/README.es.md"
+Issues = "https://github.com/jpesqueda/pesping/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["pesping"]
